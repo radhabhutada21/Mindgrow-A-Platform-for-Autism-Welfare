@@ -1,0 +1,580 @@
+/* HomePage.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #4a90e2;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .homepage-container {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Header Styles */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-icon {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    margin-right: 10px;
+    position: relative;
+  }
+  
+  .logo-icon::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  .logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4a90e2;
+  }
+  
+  .nav-menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-menu li a {
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-menu li a:hover {
+    color: #4a90e2;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 8rem 5% 5rem;
+    background: linear-gradient(135deg, #f2f9ff 0%, #e6f2ff 100%);
+  }
+  
+  .hero-content {
+    max-width: 600px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    line-height: 1.2;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+  
+  .login-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: #4a90e2;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: #357abd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-secondary {
+    background-color: white;
+    color: #4a90e2;
+    border: 2px solid #4a90e2;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #f2f9ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+  
+  .btn-outline {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+  }
+  
+  .btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .hero-image {
+    flex: 1;
+    max-width: 500px;
+    height: 400px;
+    background: url("C:\Users\lenovo\Desktop\Radha's Final Code\Radha's Final Code\neuro-frontend\src\media\photos\navbarlogo.jpg") center/cover no-repeat;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Login Modal */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+  }
+  
+  .login-modal {
+    background-color: white;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #777;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .form-actions {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .form-actions p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Section Styles */
+  section {
+    padding: 5rem 5%;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+  
+  .section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #4a90e2;
+  }
+  
+  /* About Section */
+  .about-section {
+    background-color: #fff;
+  }
+  
+  .section-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: space-between;
+  }
+  
+  .about-text {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .about-text p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .about-stats {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .stat-item {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #f8faff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    min-width: 150px;
+  }
+  
+  .stat-item h3 {
+    font-size: 2rem;
+    color: #4a90e2;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Features Section */
+  .features-section {
+    background-color: #f8faff;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .feature-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f9ff;
+  }
+  
+  .child-profile {
+    background-color: #e8f4ff;
+    position: relative;
+  }
+  
+  .child-profile::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #4a90e2;
+    border-radius: 50%;
+  }
+  
+  .progress-tracking {
+    background-color: #fff2e8;
+    position: relative;
+  }
+  
+  .progress-tracking::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #ff9650;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+  
+  .doctor-connect {
+    background-color: #e8fff2;
+    position: relative;
+  }
+  
+  .doctor-connect::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #50c878;
+    border-radius: 50%;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  }
+  
+  .resources {
+    background-color: #f2e8ff;
+    position: relative;
+  }
+  
+  .resources::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #9650ff;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 50% 100%, 0% 70%);
+  }
+  
+  .feature-card h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+  }
+  
+  /* Testimonials Section */
+  .testimonials-section {
+    background-color: #2c3e50;
+    color: white;
+  }
+  
+  .testimonials-section .section-header h2 {
+    color: white;
+  }
+  
+  .testimonials-section .section-header h2::after {
+    background-color: white;
+  }
+  
+  .testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .testimonial-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    flex: 1;
+    min-width: 280px;
+    max-width: 500px;
+  }
+  
+  .testimonial-card p {
+    font-style: italic;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+  
+  .testimonial-author {
+    font-weight: 600;
+    text-align: right;
+  }
+  
+  /* Call to Action Section */
+  .cta-section {
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    color: white;
+    text-align: center;
+    padding: 4rem 5%;
+  }
+  
+  .cta-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #f8faff;
+    padding: 4rem 5% 2rem;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+  
+  .footer-logo {
+    flex: 1;
+    min-width: 240px;
+  }
+  
+  .footer-logo h3 {
+    color: #4a90e2;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .link-column {
+    min-width: 120px;
+  }
+  
+  .link-column h4 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+  }
+  
+  .link-column ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .link-column a {
+    color: #555;
+    transition: color 0.3s;
+  }
+  
+  .link-column a:hover {
+    color: #4a90e2;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #ddd;
+    color: #777;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .hero-content {
+      margin-bottom: 3rem;
+    }
+    
+    .login-buttons {
+      justify-content: center;
+    }
+    
+    .nav-menu {
+      display: none;
+    }
+    
+    .about-stats {
+      justify-content: center;
+    }
+    
+    .footer-content {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .footer-links {
+      justify-content: space-between;
+    }
+  }
